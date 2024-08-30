@@ -1,9 +1,13 @@
 import { useQuery } from "react-query";
 import { fetchCoinData } from "../../services/fetchCoinData";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { CurrencyContext } from "../../context/CurrencyContext";
 
-function CoinTable({currency}){
+function CoinTable(){
+
+    const {currency} = useContext(CurrencyContext);
     const [page, setPage] = useState(1);
+    
     const {data, isLoading, isError, error} = useQuery(['coins', page, currency], ()=>fetchCoinData('page', currency), {
         // retry : 2, 
         // retryDelay : 1000,

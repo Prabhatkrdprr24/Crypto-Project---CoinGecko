@@ -1,12 +1,12 @@
 [Deployed URL](crypto-project-coin-gecko-zeta.vercel.app)
 
 # Package & Techonology used in the project 
-  -Reusable components made using presenter container pattern
-  -Custom hooks implemented
-  -State management done by zustand
-  -Consuming CoinGecko Free API
-  -API requests are cached using React query
-  -Suspense and error boundaries implemented
+  Reusable components made using presenter container pattern<br/>
+  Custom hooks implemented<br/>
+  -State management done by zustand<br/>
+  -Consuming CoinGecko Free API<br/>
+  -API requests are cached using React query<br/>
+  -Suspense and error boundaries implemented<br/>
 
 # Homepage Image
 ![image](https://github.com/user-attachments/assets/421b4e8a-ddac-4ee1-bfd1-28f46792e2e9)

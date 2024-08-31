@@ -1,6 +1,9 @@
 import { fetchCoinHistoricData } from "../services/fetchCoinHistoricData";
+import currencyStore from '../state/store';
+import { useState } from "react";
+import { useQuery } from "react-query";
 
-function useFetchCoinHistory(){
+function useFetchCoinHistory(coinId){
     const { currency } = currencyStore();
     const [days, setDays] = useState(7);
     const [interval, setCoinInterval] = useState('');
@@ -10,7 +13,7 @@ function useFetchCoinHistory(){
         staleTime : 1000 * 60 * 2,
     })
 
-    return [
+    return {
         historicData,
         isLoading,
         isError,
@@ -18,7 +21,7 @@ function useFetchCoinHistory(){
         setDays,
         setCoinInterval,
         days,
-    ]
+    }
 }
 
 export default useFetchCoinHistory;

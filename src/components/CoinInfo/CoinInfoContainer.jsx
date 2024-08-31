@@ -1,11 +1,11 @@
 import CoinInfo from "./CoinInfo";
 import currencyStore from '../../state/store';
-import { useState } from "react";
-import { useQuery } from "react-query";
-import { fetchCoinHistoricData } from "../../services/fetchCoinHistoricData";
 import PageLoader from '../PageLoader/PageLoader';
+import useFetchCoinHistory from "../../hooks/useFetchCoinHistory";
 
 function CoinInfoContainer({coinId}){
+
+    const { historicData, isError, isLoading, currency, days, setDays, setCoinInterval } = useFetchCoinHistory(coinId);
 
     if(isLoading){
         return(

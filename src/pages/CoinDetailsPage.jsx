@@ -5,7 +5,9 @@ function CoinDetailsPage(){
     const {coinId} = useParams();
 
     return(
+        
         <div>
+            
             <h1>Coin Details page { coinId }</h1>
         </div>
     );

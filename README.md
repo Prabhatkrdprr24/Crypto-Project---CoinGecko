@@ -2,7 +2,7 @@
 
 # Package & Techonology used in the project 
   Reusable components made using presenter container pattern<br/>
-  Custom hooks implemented<br/>
+  -Custom hooks implemented<br/>
   -State management done by zustand<br/>
   -Consuming CoinGecko Free API<br/>
   -API requests are cached using React query<br/>

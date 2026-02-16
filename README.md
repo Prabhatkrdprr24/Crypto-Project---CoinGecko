@@ -1,3 +1,5 @@
+## Crypto Currency Price Tracking Website
+
 [Deployed URL](crypto-project-coin-gecko-zeta.vercel.app)
 
 # Package & Techonology used in the project 

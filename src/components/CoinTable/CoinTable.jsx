@@ -14,7 +14,7 @@ function CoinTable(){
 
     const navigate = useNavigate();
 
-    const {data, isLoading, isError, error} = useQuery(['coins', page, currency], ()=>fetchCoinData('page', currency), {
+    const {data, isLoading, isError, error} = useQuery(['coins', page, currency], ()=>fetchCoinData(page, currency), {
         // retry : 2, 
         // retryDelay : 1000,
         cacheTime : 1000 * 60 * 2,
@@ -32,7 +32,7 @@ function CoinTable(){
 
     if(isLoading){
         return(
-        <PageLoader />
+            <PageLoader />
         );
     }
     if(isError){
